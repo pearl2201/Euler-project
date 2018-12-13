@@ -16,7 +16,6 @@ defmodule Primes do
       if Enum.any?(acc, fn x -> rem(i, x) == 0 end) do
         get_primes(acc, i + 1, n)
       else
-        acc |> IO.inspect(charlists: :as_lists)
         get_primes(acc ++ [i], i + 1, n)
       end
     end
